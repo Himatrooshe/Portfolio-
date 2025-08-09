@@ -1,0 +1,14 @@
+/* Add this to your existing CSS or create a new file */
+section[id] {
+  scroll-margin-top: 100px; /* Adjust based on your header height */
+  min-height: 100vh; /* Each section takes at least full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ensure the content container has proper spacing */
+#content {
+  position: relative;
+  width: 100%;
+}
