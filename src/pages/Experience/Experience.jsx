@@ -54,28 +54,44 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
+      icon: Code2,
+      title: "Junior Front-End Engineer",
+      company: "Autobizz",
+      period: "May 2025 – Sep 2025",
       description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
+        "Engineered React.js CRM systems with REST APIs, built Next.js websites with Framer Motion/GSAP, developed Shopify Plus solutions using Remix.js, and implemented Docker-based CI/CD workflows, reducing deployment issues by 30%.",
     },
     {
       icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
+      title: "Frontend Intern & Brand Designer",
+      company: "Autobizz",
+      period: "May 2024 – Apr 2025",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+        "Rebuilt company website with HTML/Tailwind CSS, developed Loan Management ERP frontend using Express.js and Bulma, automated Shopify-Google Sheets synchronization, and created content-manageable Shopify Remix websites.",
     },
     {
-      icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
-      period: "2023 - Present",
+      icon: Activity,
+      title: "Brand Designer Intern",
+      company: "Autobizz",
+      period: "Aug 2023 – Apr 2024",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+        "Designed marketing materials and visuals using Adobe Creative Suite, contributing to brand identity and visual communication strategies.",
+    },
+    {
+      icon: Network,
+      title: "Exam Invigilator (Freelance)",
+      company: "British Council",
+      period: "May 2024 – Present",
+      description:
+        "Ensured integrity of examination procedures in high-stakes testing environments, maintaining professional standards and protocols.",
+    },
+    {
+      icon: Cpu,
+      title: "Digital Marketing Intern",
+      company: "Digest Knowledge",
+      period: "Sep 2021 – Mar 2022",
+      description:
+        "Created visual content for digital platforms using Adobe Creative Suite, supporting digital marketing campaigns and brand presence.",
     },
   ];
 
@@ -119,7 +135,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Experience grid with improved layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}

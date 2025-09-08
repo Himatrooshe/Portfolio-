@@ -7,49 +7,88 @@ import { ReactLenis } from "lenis/react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+// Import project images
+import AutobizzMain from "@/assets/images/autobizz.,homnemain.png";
+import AutobizzStore from "@/assets/images/store.autobizz.png";
+import CheeseClub from "@/assets/images/cheesclub.png";
+import JellyLand from "@/assets/images/jellayland.png";
+import Rudy from "@/assets/images/rudy.png";
+import AutobizzOld from "@/assets/images/autobizzhomeold.png";
+import vendor from "@/assets/images/mulivendor.png";
+
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Olova! A Lightweight JavaScript Library",
+    title: "Autobizz - Main Company Website",
     description:
-      "A lightweight JavaScript library for creating beautiful, responsive UI components.",
+      "Redesigned and rebuilt the main Autobizz company website with modern UI/UX principles. Features responsive design, improved performance, and enhanced user experience using HTML, Tailwind CSS, and JavaScript.",
     src: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
+    link: AutobizzMain,
     color: "#5196fd",
-    githubLink: "https://github.com/olovajs/olova",
-    liveLink: "https://olova.js.org/",
+    githubLink: "",
+    liveLink: "https://www.autobizz.net/",
   },
   {
-    title: "A sleek portfolio built with React and Tailwind CSS ",
+    title: "Autobizz Store - E-commerce Platform",
     description:
-      "A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
+      "Developed a comprehensive e-commerce store for Autobizz with product catalog, shopping cart, and checkout functionality. Built with modern web technologies focusing on performance and user experience.",
     src: "tree.jpg",
-    link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
+    link: AutobizzStore,
     color: "#8f89ff",
-    githubLink: "https://github.com/seraprogrammer/portfolio",
-    liveLink: "https://codervai.vercel.app",
+    githubLink: "",
+    liveLink: "https://store.autobizz.net/",
   },
   {
-    title: "🚀 CodeWhisperer",
+    title: "CRM System - Customer Relationship Management",
     description:
-      "🚀 CodeWhisperer A powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
+      "Engineered a comprehensive CRM system that streamlined order management through integrated REST APIs for tracking, status updates, and file management. Built with React.js and modern UI components for efficient customer relationship handling and business process automation.",
     src: "water.jpg",
-    link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
-    color: "#fff",
-    githubLink: "https://github.com/seraprogrammer/codewhisperer",
-    liveLink: "https://codewhisperer.vercel.app/",
+    link: CheeseClub,
+    color: "#ff6b35",
+    githubLink: "",
+    liveLink: "https://crm-system.vercel.app/",
   },
   {
-    title: "CodeKori 🔥",
+    title: "JellyLand - Entertainment & Gaming Hub",
     description:
-      "CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
+      "Built an interactive entertainment platform with games, multimedia content, and user engagement features. Focused on creating a fun, colorful, and responsive design that appeals to a wide audience.",
     src: "house.jpg",
-    link: "https://i.postimg.cc/cHQr4fpR/Annotation-2025-04-01-205350.png",
-    color: "#ed649e",
-    githubLink: "https://github.com/seraprogrammer/CodeKori",
-    liveLink: "https://codekori.js.org",
+    link: JellyLand,
+    color: "#ff1493",
+    githubLink: "",
+    liveLink: "https://jellly-land-official-1e9b3b87bdedc42c02fc.o2.myshopify.dev/",
+  },
+  {
+    title: "Loan Management ERP System",
+    description:
+      "Developed a comprehensive Enterprise Resource Planning system for loan management with intuitive forms, dashboards, and automated workflows. Built using Express.js and Bulma framework, featuring real-time data processing and secure user authentication.",
+    src: "rock.jpg",
+    link: Rudy,
+    color: "#00c9a7",
+    githubLink: "",
+    liveLink: "",
+  },
+  {
+    title: "Autobizz Legacy - Previous Website Version",
+    description:
+      "Previous version of the Autobizz company website showcasing the evolution of design and functionality. Demonstrates progression in web development skills and design thinking over time.",
+    src: "house.jpg",
+    link: AutobizzOld,
+    color: "#6c5ce7",
+    githubLink: "",
+    liveLink: "",
+  },
+  {
+    title: "Multi-vendor E-commerce Platform",
+    description:
+      "Built a comprehensive multi-vendor e-commerce platform with vendor dashboards, product management, order processing, and payment integration. Features include vendor registration, inventory management, commission tracking, and customer reviews. Built with Next.js, TypeScript, and modern UI components.",
+    src: "rock.jpg",
+    link: vendor,
+    color: "#10b981",
+    githubLink: "https://github.com/junaidzamaahmed/multivendor-ecommerce",
+    liveLink: "https://multivendor-ecommerce-six.vercel.app/",
   },
 ];
 
@@ -213,41 +252,17 @@ function Card({
           marginTop: "var(--project-margin, 0)",
         }}
         className="relative -top-[15%] h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
-        whileHover={{
-          y: -12,
-          transition: { 
-            duration: 0.5, 
-            ease: [0.25, 0.1, 0.25, 1], // Cubic bezier for smoother motion
-            type: "spring",
-            stiffness: 120,
-            damping: 15
-          },
-        }}
       >
         {/* Modern split card design */}
         <div className="w-full flex flex-col md:flex-row bg-zinc-900 rounded-2xl overflow-hidden shadow-xl">
           {/* Image section - full width on mobile, 55% on desktop */}
           <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
-            <motion.img
+            <img
               src={url}
               alt={title}
               className="w-full h-full object-cover"
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ 
-                duration: 0.6, 
-                ease: "easeOut" 
-              }}
             />
 
-            {/* Colored overlay on hover */}
-            <motion.div
-              className="absolute inset-0"
-              style={{ backgroundColor: color, mixBlendMode: "overlay" }}
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 0.3 }}
-              transition={{ duration: 0.3 }}
-            />
 
             {/* Project number */}
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium card-content-animate">
@@ -279,13 +294,11 @@ function Card({
 
               <div className="flex items-center gap-4">
                 {/* GitHub Link */}
-                <motion.a
+                <a
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -306,16 +319,14 @@ function Card({
                   >
                     Code
                   </span>
-                </motion.a>
+                </a>
 
                 {/* Live Link */}
-                <motion.a
+                <a
                   href={liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -338,7 +349,7 @@ function Card({
                   >
                     Live
                   </span>
-                </motion.a>
+                </a>
               </div>
             </div>
           </div>

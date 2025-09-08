@@ -15,24 +15,24 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      degree: "BS in Computer Science",
+      school: "BRAC University",
+      mascot: "🎓",
+      year: "Expected December 2025",
+      achievements: ["GPA: 3.14+ (Last Semester)", "Major: Computer Science"],
+      skills: ["Data Structures", "Algorithms", "Software Engineering", "Machine Learning", "Database Systems", "Web Development"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Pursuing comprehensive computer science education with focus on software development, machine learning, and modern web technologies. Active in university tech communities and research projects.",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      degree: "Thesis Project",
+      school: "BRAC University",
+      mascot: "🔬",
+      year: "2024-2025",
+      achievements: ["Advanced Machine Learning Research", "CNN & Autoencoder Implementation"],
+      skills: ["Logistic Regression", "Random Forest", "XGBoost", "SVC", "Neural Networks", "Python"],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Advanced Machine Learning Techniques for Personalized Alopecia Areata Intervention Modeling - Developed predictive models and CNN-based neural networks on fused datasets for improved performance metrics.",
     },
   ];
 

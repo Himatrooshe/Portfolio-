@@ -43,31 +43,32 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer",
-    "Learning MARN Stack",
-    "Linux & GitHub for DevOps Enthusiast",
+    "Frontend Developer with 2+ years experience",
+    "React & Next.js Specialist",
+    "Shopify & E-commerce Expert",
+    "UI/UX Design Enthusiast",
   ];
 
   const [code] = useState(`
 const profile = {
-    name: 'Oshi',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
+    name: 'Md Mozahidul Islam',
+    title: 'Frontend Developer | Shopify Expert | UI/UX Enthusiast',
+    location: 'Dhaka, Bangladesh',
     skills: [
-        'React', 'NextJS', 'Redux', 'Express',
-        'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
+        'React.js', 'Next.js', 'JavaScript (ES6+)', 'Tailwind CSS',
+        'Shopify', 'Shopify Plus', 'Liquid', 'GraphQL',
+        'REST APIs', 'Docker', 'MongoDB', 'Git'
     ],
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
-    yearsOfExperience: 4, 
+    yearsOfExperience: 2, 
     hireable: function() {
         return (
             this.hardWorker &&
             this.problemSolver &&
-            this.skills.length >= 5 &&
-            this.yearsOfExperience >= 3
+            this.skills.length >= 8 &&
+            this.yearsOfExperience >= 2
         );
     }
 };
@@ -211,7 +212,7 @@ const profile = {
                     I&apos;m
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Oshi
+                    Mozahidul
                     </span>
                   </span>
                 </h1>
@@ -232,8 +233,8 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover | Crafting frameworks
-                  and coding the future 💻✨
+                  Frontend Developer specializing in React, Next.js & Shopify | 
+                  Building scalable e-commerce solutions 
                 </p>
               </div>
 
@@ -241,7 +242,7 @@ const profile = {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  href="https://github.com/seraprogrammer"
+                  href="https://github.com/mozahidulislamoshe"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
