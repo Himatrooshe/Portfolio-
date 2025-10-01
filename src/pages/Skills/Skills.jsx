@@ -69,61 +69,26 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       icon: Code2,
-      title: "Frontend Development",
+      title: "Backend Development",
       color: "text-blue-400",
       skills: [
-        { name: "React.js", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-        {
-          name: "Next.js",
-          icon: <SiNextdotjs className="w-4 h-4 text-white" />,
-        },
-        {
-          name: "JavaScript (ES6+)",
-          icon: <SiTypescript className="w-4 h-4 text-[#F7DF1E]" />,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-        },
-        {
-          name: "HTML5",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#E34F26]" />,
-        },
-        {
-          name: "CSS3",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#1572B6]" />,
-        },
+        { name: "Node.js", icon: <FaNodeJs className="w-4 h-4 text-[#339933]" /> },
+        { name: "Express.js", icon: <FaNodeJs className="w-4 h-4 text-[#68A063]" /> },
+        { name: "TypeScript", icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" /> },
+        { name: "Next.js (API Routes)", icon: <SiNextdotjs className="w-4 h-4 text-white" /> },
+        { name: "REST APIs", icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" /> },
+        { name: "GraphQL", icon: <SiGraphql className="w-4 h-4 text-[#E10098]" /> },
       ],
     },
     {
       icon: Database,
-      title: "E-Commerce & Backend",
+      title: "Databases & Messaging",
       color: "text-green-400",
       skills: [
-        {
-          name: "Shopify",
-          icon: <SiShopify className="w-4 h-4 text-[#7AB55C]" />,
-        },
-        {
-          name: "Shopify Plus",
-          icon: <SiShopify className="w-4 h-4 text-[#7AB55C]" />,
-        },
-        {
-          name: "Liquid",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#7AB55C]" />,
-        },
-        {
-          name: "MongoDB",
-          icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
-        },
-        {
-          name: "REST APIs",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
-        },
-        {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
-        },
+        { name: "PostgreSQL", icon: <SiPostgresql className="w-4 h-4 text-[#336791]" /> },
+        { name: "MongoDB", icon: <SiMongodb className="w-4 h-4 text-[#47A248]" /> },
+        { name: "Prisma ORM", icon: <SiNextdotjs className="w-4 h-4 text-white" /> },
+        { name: "Caching (Redis)", icon: <Database className="w-4 h-4 text-[#DC382D]" /> },
       ],
     },
     {
@@ -203,25 +168,13 @@ const SkillsSection = () => {
     },
     {
       icon: Paintbrush,
-      title: "Databases & APIs",
+      title: "DevOps & Observability",
       color: "text-yellow-400",
       skills: [
-        {
-          name: "MongoDB",
-          icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
-        },
-        {
-          name: "SQL",
-          icon: <Database className="w-4 h-4 text-[#00758F]" />,
-        },
-        {
-          name: "Shopify Remix",
-          icon: <SiShopify className="w-4 h-4 text-[#7AB55C]" />,
-        },
-        {
-          name: "Express.js",
-          icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
-        },
+        { name: "Docker", icon: <FaDocker className="w-4 h-4 text-[#2496ED]" /> },
+        { name: "CI/CD", icon: <Cloud className="w-4 h-4 text-[#4285F4]" /> },
+        { name: "Logging & Metrics", icon: <BsGrid1X2 className="w-4 h-4 text-[#34A853]" /> },
+        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
       ],
     },
   ];

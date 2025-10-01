@@ -55,19 +55,19 @@ const ExperienceSection = () => {
   const experiences = [
     {
       icon: Code2,
-      title: "Junior Front-End Engineer",
+      title: "Junior Backend Engineer",
       company: "Autobizz",
       period: "May 2025 – Sep 2025",
       description:
-        "Engineered React.js CRM systems with REST APIs, built Next.js websites with Framer Motion/GSAP, developed Shopify Plus solutions using Remix.js, and implemented Docker-based CI/CD workflows, reducing deployment issues by 30%.",
+        "Designed and implemented REST/GraphQL APIs with Node.js and Express.js, integrated PostgreSQL and MongoDB using Prisma/Mongoose, optimized queries and caching, and built Docker-based CI/CD pipelines reducing deployment issues by 30%.",
     },
     {
       icon: Layers,
-      title: "Frontend Intern & Brand Designer",
+      title: "Backend Intern & Automation Assistant",
       company: "Autobizz",
       period: "May 2024 – Apr 2025",
       description:
-        "Rebuilt company website with HTML/Tailwind CSS, developed Loan Management ERP frontend using Express.js and Bulma, automated Shopify-Google Sheets synchronization, and created content-manageable Shopify Remix websites.",
+        "Built backend for Loan Management ERP with Express.js, integrated authentication and role-based access, designed data models, automated Shopify–Google Sheets synchronization with serverless functions, and contributed to internal API documentation.",
     },
     {
       icon: Activity,
