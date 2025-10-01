@@ -51,9 +51,9 @@ const projects = [
     liveLink: "https://crm-system.vercel.app/",
   },
   {
-    title: "JellyLand - Entertainment & Gaming Hub",
+    title: "JellyLand – Fullstack Shopify Store",
     description:
-      "Built an interactive entertainment platform with games, multimedia content, and user engagement features. Focused on creating a fun, colorful, and responsive design that appeals to a wide audience.",
+      "Fullstack Shopify build using Remix framework on Shopify, Node.js server routes, and the GraphQL Storefront API. Implements product browsing, cart, customer accounts, and dynamic content management with optimized caching and responsive UI.",
     src: "house.jpg",
     link: JellyLand,
     color: "#ff1493",
