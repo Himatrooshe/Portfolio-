@@ -43,21 +43,21 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Backend Developer with 2+ years experience",
-    "Node.js & Next.js API Specialist",
-    "Database & System Design Enthusiast",
-    "Scalable Services & DevOps",
+    "Frontend Developer with 2+ years experience",
+    "React & Next.js Specialist",
+    "Shopify & E-commerce Expert",
+    "UI/UX Design Enthusiast",
   ];
 
   const [code] = useState(`
 const profile = {
     name: 'Md Mozahidul Islam',
-    title: 'Backend Developer | Node.js & API Engineer | DevOps Curious',
+    title: 'Frontend Developer | Shopify Expert | UI/UX Enthusiast',
     location: 'Dhaka, Bangladesh',
     skills: [
-        'Node.js', 'Next.js (API Routes)', 'TypeScript', 'Express.js',
-        'PostgreSQL', 'MongoDB', 'Prisma', 'GraphQL',
-        'REST APIs', 'Docker', 'CI/CD', 'Git'
+        'React.js', 'Next.js', 'JavaScript (ES6+)', 'Tailwind CSS',
+        'Shopify', 'Shopify Plus', 'Liquid', 'GraphQL',
+        'REST APIs', 'Docker', 'MongoDB', 'Git'
     ],
     hardWorker: true,
     quickLearner: true,
@@ -233,8 +233,8 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  Backend Developer specializing in Node.js, APIs & Databases | 
-                  Building reliable, scalable services 
+                  Frontend Developer specializing in React, Next.js & Shopify | 
+                  Building scalable e-commerce solutions 
                 </p>
               </div>
 
