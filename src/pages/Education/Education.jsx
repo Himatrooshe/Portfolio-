@@ -18,21 +18,38 @@ const EducationSection = () => {
       degree: "BS in Computer Science",
       school: "BRAC University",
       mascot: "🎓",
-      year: "Expected December 2025",
-      achievements: ["GPA: 3.14+ (Last Semester)", "Major: Computer Science"],
-      skills: ["Data Structures", "Algorithms", "Software Engineering", "Machine Learning", "Database Systems", "Web Development"],
+      year: "December 2025",
+      achievements: ["CGPA: 3.08", "Major: Computer Science"],
+      skills: [
+        "Data Structures",
+        "Algorithms",
+        "Software Engineering",
+        "Machine Learning",
+        "Database Systems",
+        "Web Development",
+      ],
       description:
-        "Pursuing comprehensive computer science education with focus on software development, machine learning, and modern web technologies. Active in university tech communities and research projects.",
+        "Completed a comprehensive computer science curriculum with focus on software development, machine learning, and modern web technologies.",
     },
     {
       degree: "Thesis Project",
       school: "BRAC University",
       mascot: "🔬",
       year: "2024-2025",
-      achievements: ["Advanced Machine Learning Research", "CNN & Autoencoder Implementation"],
-      skills: ["Logistic Regression", "Random Forest", "XGBoost", "SVC", "Neural Networks", "Python"],
+      achievements: [
+        "Advanced Machine Learning Research",
+        "Model benchmarking with clear metrics",
+      ],
+      skills: [
+        "Logistic Regression",
+        "Random Forest",
+        "XGBoost",
+        "SVC",
+        "CNN",
+        "Autoencoders",
+      ],
       description:
-        "Advanced Machine Learning Techniques for Personalized Alopecia Areata Intervention Modeling - Developed predictive models and CNN-based neural networks on fused datasets for improved performance metrics.",
+        "Advanced Machine Learning Techniques for Personalized Alopecia Areata Intervention Modeling — built and evaluated ML models and developed CNN/Autoencoder-based networks on fused datasets through iterative experimentation and debugging.",
     },
   ];
 

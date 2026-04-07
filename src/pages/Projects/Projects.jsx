@@ -21,74 +21,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Autobizz - Main Company Website",
+    title: "Anime Watching & Manga Reading Website (MERN)",
     description:
-      "Redesigned and rebuilt the main Autobizz company website with modern UI/UX principles. Features responsive design, improved performance, and enhanced user experience using HTML, Tailwind CSS, and JavaScript.",
+      "Built a full-stack platform with authentication, search, and content categorization. Implemented backend APIs and integrated them with a responsive frontend UI.",
     src: "rock.jpg",
-    link: AutobizzMain,
+    link: CheeseClub,
     color: "#5196fd",
     githubLink: "",
-    liveLink: "https://www.autobizz.net/",
+    liveLink: "",
   },
   {
-    title: "Autobizz Store - E-commerce Platform",
+    title: "Multi-vendor E-commerce Website (MERN + Tailwind + shadcn/ui)",
     description:
-      "Developed a comprehensive e-commerce store for Autobizz with product catalog, shopping cart, and checkout functionality. Built with modern web technologies focusing on performance and user experience.",
+      "Developed a marketplace with vendor dashboards, cart, and order workflows. Integrated API endpoints and handled error states for a reliable UX.",
     src: "tree.jpg",
-    link: AutobizzStore,
+    link: vendor,
     color: "#8f89ff",
     githubLink: "",
-    liveLink: "https://store.autobizz.net/",
+    liveLink: "",
   },
   {
-    title: "CRM System - Customer Relationship Management",
+    title: "Hand Gesture Controlled Robot (IoT + Arduino)",
     description:
-      "Engineered a comprehensive CRM system that streamlined order management through integrated REST APIs for tracking, status updates, and file management. Built with React.js and modern UI components for efficient customer relationship handling and business process automation.",
+      "Built a robotic car controlled by hand gestures using Arduino and sensors, integrating wireless communication and troubleshooting hardware/software issues.",
     src: "water.jpg",
-    link: CheeseClub,
+    link: Rudy,
     color: "#ff6b35",
     githubLink: "",
-    liveLink: "https://crm-system.vercel.app/",
+    liveLink: "",
   },
   {
-    title: "JellyLand - Entertainment & Gaming Hub",
+    title: "Website Security Service Landing Page",
     description:
-      "Built an interactive entertainment platform with games, multimedia content, and user engagement features. Focused on creating a fun, colorful, and responsive design that appeals to a wide audience.",
+      "Built a responsive landing page with SEO optimization and conversion-focused UX.",
     src: "house.jpg",
     link: JellyLand,
     color: "#ff1493",
     githubLink: "",
-    liveLink: "https://jellly-land-official-1e9b3b87bdedc42c02fc.o2.myshopify.dev/",
+    liveLink: "",
   },
   {
-    title: "Loan Management ERP System",
+    title: "Shopify Store Optimization",
     description:
-      "Developed a comprehensive Enterprise Resource Planning system for loan management with intuitive forms, dashboards, and automated workflows. Built using Express.js and Bulma framework, featuring real-time data processing and secure user authentication.",
+      "Upgraded product detail pages and improved performance with customer-centric layout refinements.",
     src: "rock.jpg",
-    link: Rudy,
+    link: AutobizzStore,
     color: "#00c9a7",
     githubLink: "",
     liveLink: "",
   },
   {
-    title: "Autobizz Legacy - Previous Website Version",
+    title: "AC Repair Service Landing Page + Automation",
     description:
-      "Previous version of the Autobizz company website showcasing the evolution of design and functionality. Demonstrates progression in web development skills and design thinking over time.",
+      "Developed a landing page with booking automation, improving operational flow and reducing manual work.",
     src: "house.jpg",
     link: AutobizzOld,
     color: "#6c5ce7",
     githubLink: "",
     liveLink: "",
-  },
-  {
-    title: "Multi-vendor E-commerce Platform",
-    description:
-      "Built a comprehensive multi-vendor e-commerce platform with vendor dashboards, product management, order processing, and payment integration. Features include vendor registration, inventory management, commission tracking, and customer reviews. Built with Next.js, TypeScript, and modern UI components.",
-    src: "rock.jpg",
-    link: vendor,
-    color: "#10b981",
-    githubLink: "https://github.com/junaidzamaahmed/multivendor-ecommerce",
-    liveLink: "https://multivendor-ecommerce-six.vercel.app/",
   },
 ];
 
@@ -289,69 +279,75 @@ function Card({
               </p>
             </div>
 
-            <div className="mt-4 md:mt-auto pt-4">
-              <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
+            {githubLink || liveLink ? (
+              <div className="mt-4 md:mt-auto pt-4">
+                <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
 
-              <div className="flex items-center gap-4">
-                {/* GitHub Link */}
-                <a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color }}
-                  >
-                    Code
-                  </span>
-                </a>
+                <div className="flex items-center gap-4">
+                  {/* GitHub Link */}
+                  {githubLink ? (
+                    <a
+                      href={githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke={color}
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span
+                        className="text-xs md:text-sm font-medium"
+                        style={{ color }}
+                      >
+                        Code
+                      </span>
+                    </a>
+                  ) : null}
 
-                {/* Live Link */}
-                <a
-                  href={liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                  </svg>
-                  <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color }}
-                  >
-                    Live
-                  </span>
-                </a>
+                  {/* Live Link */}
+                  {liveLink ? (
+                    <a
+                      href={liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke={color}
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                      </svg>
+                      <span
+                        className="text-xs md:text-sm font-medium"
+                        style={{ color }}
+                      >
+                        Live
+                      </span>
+                    </a>
+                  ) : null}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
         </div>
       </motion.div>
@@ -369,6 +365,6 @@ Card.propTypes = {
   progress: PropTypes.object.isRequired,
   range: PropTypes.array.isRequired,
   targetScale: PropTypes.number.isRequired,
-  githubLink: PropTypes.string.isRequired,
-  liveLink: PropTypes.string.isRequired,
+  githubLink: PropTypes.string,
+  liveLink: PropTypes.string,
 };

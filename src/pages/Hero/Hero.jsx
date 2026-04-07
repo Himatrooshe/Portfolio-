@@ -43,21 +43,21 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Frontend Developer with 2+ years experience",
-    "React & Next.js Specialist",
-    "Shopify & E-commerce Expert",
-    "UI/UX Design Enthusiast",
+    "Software Engineer with 2+ years experience",
+    "Backend APIs & Integrations (Node.js/Express)",
+    "React & Next.js for customer-centric apps",
+    "Debugging & production reliability",
   ];
 
   const [code] = useState(`
 const profile = {
     name: 'Md Mozahidul Islam',
-    title: 'Frontend Developer | Shopify Expert | UI/UX Enthusiast',
+    title: 'Software Engineer | Backend (Node.js/Express) | React/Next.js',
     location: 'Dhaka, Bangladesh',
     skills: [
-        'React.js', 'Next.js', 'JavaScript (ES6+)', 'Tailwind CSS',
-        'Shopify', 'Shopify Plus', 'Liquid', 'GraphQL',
-        'REST APIs', 'Docker', 'MongoDB', 'Git'
+        'JavaScript (ES6+)', 'TypeScript (basic)', 'Node.js', 'Express.js',
+        'REST APIs', 'Authentication (JWT)', 'MongoDB', 'SQL (Postgres)',
+        'React.js', 'Next.js', 'Docker', 'Git'
     ],
     hardWorker: true,
     quickLearner: true,
@@ -233,8 +233,9 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  Frontend Developer specializing in React, Next.js & Shopify | 
-                  Building scalable e-commerce solutions 
+                  Software Engineer with 2+ years experience building customer-centric web applications
+                  across frontend and backend. I ship reliable integrations, design clean APIs, and debug
+                  production issues.
                 </p>
               </div>
 
@@ -255,12 +256,12 @@ const profile = {
 
                 {/* Contact Button */}
                 <a
-                  href="#"
+                  href="/contact"
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                     <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
-                      <span>Get Resume</span>
+                      <span>Contact</span>
                       <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                     </span>
                   </span>

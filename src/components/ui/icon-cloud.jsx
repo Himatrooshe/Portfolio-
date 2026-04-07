@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
-import { useTheme } from "next-themes";
 import { Cloud, fetchSimpleIcons, renderSimpleIcon } from "react-icon-cloud";
 
 export const cloudProps = {
@@ -30,7 +29,7 @@ export const cloudProps = {
   },
 };
 
-export const renderCustomIcon = (icon, theme, imageArray) => {
+export const renderCustomIcon = (icon, theme) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
@@ -57,7 +56,7 @@ export default function IconCloud({
   imageArray,
 }) {
   const [data, setData] = useState(null);
-  const { theme } = useTheme();
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     if (iconSlugs.length > 0) {
@@ -65,6 +64,17 @@ export default function IconCloud({
       fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
     }
   }, [iconSlugs]);
+
+  useEffect(() => {
+    // Vite/React app (not Next.js): infer theme safely.
+    // Default to dark; prefer OS if available; follow changes.
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const update = () => setTheme(mq.matches ? "dark" : "light");
+    update();
+    mq.addEventListener?.("change", update);
+    return () => mq.removeEventListener?.("change", update);
+  }, []);
 
   const renderedIcons = useMemo(() => {
     if (!data) return null;

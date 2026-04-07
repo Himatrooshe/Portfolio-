@@ -54,12 +54,28 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
+      icon: Network,
+      title: "Junior Software Engineer (Backend)",
+      company: "HubXpert – Bangladesh (Hybrid)",
+      period: "Mar 2026 – Present",
+      description:
+        "Built and maintained backend APIs for HubSpot–Nextech integration. Debugged production issues (API failures, validation errors, missing triggers). Implemented secure access & refresh token handling and improved reliability with better logging, error handling, and pagination.",
+    },
+    {
+      icon: Layers,
+      title: "Intern - Software Developer (Backend)",
+      company: "HubXpert – Bangladesh (Hybrid)",
+      period: "Dec 2025 – Mar 2026",
+      description:
+        "Assisted in developing APIs for CRM to appointment system integration. Worked on data mapping and backend debugging. Supported authentication flows and API testing.",
+    },
+    {
       icon: Code2,
       title: "Junior Front-End Engineer",
       company: "Autobizz",
       period: "May 2025 – Sep 2025",
       description:
-        "Engineered React.js CRM systems with REST APIs, built Next.js websites with Framer Motion/GSAP, developed Shopify Plus solutions using Remix.js, and implemented Docker-based CI/CD workflows, reducing deployment issues by 30%.",
+        "Engineered a React.js CRM integrating REST APIs for order workflows; implemented Redux for predictable state and clear UI behavior. Partnered with PM/Design/QA to deliver features end-to-end and resolved API/UI issues across payload validation, edge cases, and error states. Supported deployments using Docker + CI/CD practices, reducing deployment issues by 30%.",
     },
     {
       icon: Layers,
@@ -67,7 +83,7 @@ const ExperienceSection = () => {
       company: "Autobizz",
       period: "May 2024 – Apr 2025",
       description:
-        "Rebuilt company website with HTML/Tailwind CSS, developed Loan Management ERP frontend using Express.js and Bulma, automated Shopify-Google Sheets synchronization, and created content-manageable Shopify Remix websites.",
+        "Rebuilt the company website with HTML, Tailwind CSS, and JavaScript, improving responsiveness and maintainability. Contributed to a Loan Management ERP by implementing frontend features and integrating backend endpoints. Enhanced Shopify stores with Liquid customizations, checkout optimizations, and UX improvements.",
     },
     {
       icon: Activity,
@@ -75,10 +91,10 @@ const ExperienceSection = () => {
       company: "Autobizz",
       period: "Aug 2023 – Apr 2024",
       description:
-        "Designed marketing materials and visuals using Adobe Creative Suite, contributing to brand identity and visual communication strategies.",
+        "Designed marketing visuals and promotional materials using Photoshop, Illustrator, and After Effects, supporting brand identity and marketing execution.",
     },
     {
-      icon: Network,
+      icon: Cpu,
       title: "Exam Invigilator (Freelance)",
       company: "British Council",
       period: "May 2024 – Present",
@@ -86,7 +102,7 @@ const ExperienceSection = () => {
         "Ensured integrity of examination procedures in high-stakes testing environments, maintaining professional standards and protocols.",
     },
     {
-      icon: Cpu,
+      icon: Binary,
       title: "Digital Marketing Intern",
       company: "Digest Knowledge",
       period: "Sep 2021 – Mar 2022",
