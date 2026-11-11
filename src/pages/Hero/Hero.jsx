@@ -210,9 +210,9 @@ const profile = {
                   <SparklesText text="Hello" />
                   <span className="relative inline-block">
                     I&apos;m
-                    <span className="typing-effect gradient-text">
+                    <span className="gradient-text">
                       {" "}
-                    Mozahidul
+                    Oshi
                     </span>
                   </span>
                 </h1>
