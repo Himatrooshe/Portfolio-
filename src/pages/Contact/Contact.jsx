@@ -11,6 +11,7 @@ export default function Contact() {
 
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = () => {
     let tempErrors = {};
@@ -53,13 +54,18 @@ export default function Contact() {
 
     // Create a new FormData object to send to Web3Forms API
     const form = new FormData();
-    form.append("access_key", "90f4b8af-e590-42b0-beaf-10b18f66a703"); // Replace with your Web3Forms access key
+    form.append("access_key", "575390cb-a827-40e6-b065-26cd263f9a4e");
+    form.append("from_name", "Oshi Portfolio");
     form.append("name", formData.name);
     form.append("email", formData.email);
-    form.append("subject", formData.subject || "New Contact Form Submission");
+    form.append("subject", `Portfolio enquiry: ${formData.subject}`);
     form.append("message", formData.message);
+    form.append("botcheck", "");
 
     try {
+      setIsSubmitting(true);
+      setStatus(null);
+
       // Send form data to Web3Forms API
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -83,6 +89,8 @@ export default function Contact() {
     } catch (error) {
       setStatus("An error occurred. Please try again.");
       console.error("Error:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -219,9 +227,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  <span>Send Message</span>
+                  <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                   <Send className="w-4 h-4" />
                 </button>
               </form>
@@ -235,7 +244,7 @@ export default function Contact() {
                       : "text-red-400"
                   }`}
                 >
-                  <p>{status}</p>
+                  <p role="status" aria-live="polite">{status}</p>
                 </div>
               )}
             </div>
