@@ -55,11 +55,11 @@ const ExperienceSection = () => {
   const experiences = [
     {
       icon: Network,
-      title: "Junior Software Engineer (Backend)",
+      title: "Junior Software Engineer (Backend / DevOps)",
       company: "HubXpert – Bangladesh (Hybrid)",
       period: "Mar 2026 – Present",
       description:
-        "Built and maintained backend APIs for HubSpot–Nextech integration. Debugged production issues (API failures, validation errors, missing triggers). Implemented secure access & refresh token handling and improved reliability with better logging, error handling, and pagination.",
+        "Develop and maintain backend services for healthcare and business products. Built pharmacist and doctor-patient portal workflows, CRM-to-EHR integrations, webhooks, record synchronization, reporting, PDF generation, and production fixes. Support deployments across Docker, Kubernetes, GKE, GCP, VPS, and CI/CD.",
     },
     {
       icon: Layers,
@@ -67,7 +67,7 @@ const ExperienceSection = () => {
       company: "HubXpert – Bangladesh (Hybrid)",
       period: "Dec 2025 – Mar 2026",
       description:
-        "Assisted in developing APIs for CRM to appointment system integration. Worked on data mapping and backend debugging. Supported authentication flows and API testing.",
+        "Supported CRM-to-appointment APIs, data mapping, authentication flows, request validation, API testing, backend debugging, and production issue investigation.",
     },
     {
       icon: Code2,
@@ -83,7 +83,7 @@ const ExperienceSection = () => {
       company: "Autobizz",
       period: "May 2024 – Apr 2025",
       description:
-        "Rebuilt the company website with HTML, Tailwind CSS, and JavaScript, improving responsiveness and maintainability. Contributed to a Loan Management ERP by implementing frontend features and integrating backend endpoints. Enhanced Shopify stores with Liquid customizations, checkout optimizations, and UX improvements.",
+        "Rebuilt the company website with HTML, JavaScript, and Tailwind CSS; contributed to a Loan Management ERP and integrated backend endpoints. Customized Shopify stores with Liquid and metafields, plus Google Sheets and JavaScript automation.",
     },
     {
       icon: Activity,
@@ -97,7 +97,7 @@ const ExperienceSection = () => {
       icon: Cpu,
       title: "Exam Invigilator (Freelance)",
       company: "British Council",
-      period: "May 2024 – Present",
+      period: "May 2024 – Nov 2025",
       description:
         "Ensured integrity of examination procedures in high-stakes testing environments, maintaining professional standards and protocols.",
     },
@@ -146,7 +146,7 @@ const ExperienceSection = () => {
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
             </div>
             <p className="text-lg md:text-xl text-gray-400 font-medium tracking-wide text-center max-w-2xl">
-              "Transforming ideas into digital reality, one project at a time"
+              Backend engineering, commerce, and reliable production systems.
             </p>
           </div>
 

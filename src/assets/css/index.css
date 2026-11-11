@@ -127,6 +127,13 @@ pre[class*="language-"] {
   font-size: 0.95rem !important;
 }
 
+@media (max-width: 640px) {
+  pre[class*="language-"] {
+    padding: 1rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
 .token.comment {
   color: #8b9cb3 !important;
   font-style: italic;

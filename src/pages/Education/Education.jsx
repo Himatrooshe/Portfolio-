@@ -19,7 +19,7 @@ const EducationSection = () => {
       school: "BRAC University",
       mascot: "🎓",
       year: "December 2025",
-      achievements: ["CGPA: 3.08", "Major: Computer Science"],
+      achievements: ["CGPA: 3.08", "Stripe Certified", "HubSpot Certified"],
       skills: [
         "Data Structures",
         "Algorithms",
@@ -95,8 +95,7 @@ const EducationSection = () => {
             Educational Journey
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shapes innovative thinking and
-            professional growth.
+            Computer science foundations strengthened by applied research and industry certifications.
           </p>
         </motion.div>
 

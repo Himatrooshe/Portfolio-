@@ -43,26 +43,26 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Software Engineer with 2+ years experience",
-    "Backend APIs & Integrations (Node.js/Express)",
-    "React & Next.js for customer-centric apps",
-    "Debugging & production reliability",
+    "Backend & DevOps Engineer",
+    "Healthcare and CRM integrations",
+    "Node.js, React and Next.js",
+    "Shopify Hydrogen and Liquid",
   ];
 
   const [code] = useState(`
 const profile = {
     name: 'Md Mozahidul Islam',
-    title: 'Software Engineer | Backend (Node.js/Express) | React/Next.js',
+    title: 'Software Engineer | Backend, DevOps & Commerce',
     location: 'Dhaka, Bangladesh',
     skills: [
         'JavaScript (ES6+)', 'TypeScript (basic)', 'Node.js', 'Express.js',
-        'REST APIs', 'Authentication (JWT)', 'MongoDB', 'SQL (Postgres)',
-        'React.js', 'Next.js', 'Docker', 'Git'
+        'REST APIs', 'Webhooks', 'PostgreSQL', 'MongoDB', 'Prisma',
+        'React.js', 'Next.js', 'Docker', 'Kubernetes', 'GCP', 'Shopify'
     ],
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
-    yearsOfExperience: 2, 
+    yearsOfExperience: 3,
     hireable: function() {
         return (
             this.hardWorker &&
@@ -157,7 +157,7 @@ const profile = {
 
   return (
     <>
-      <main className="bg-[#020617] text-white min-h-screen">
+      <main className="bg-[#020617] text-white min-h-screen overflow-x-hidden">
         <section
           className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-0 hero-section-padding"
           style={{ paddingTop: "var(--hero-padding-top, 0)" }}
@@ -191,7 +191,7 @@ const profile = {
             }}
           >
             {/* Left column - Text content */}
-            <div className="w-full lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative">
+            <div className="w-full min-w-0 lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative">
               {/* Decorative blurs */}
               <div className="absolute hidden lg:-top-20 lg:-left-20 lg:block w-48 h-48 lg:w-64 lg:h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
               <div className="absolute hidden lg:block lg:top-40 lg:-right-20 w-48 h-48 lg:w-64 lg:h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
@@ -233,9 +233,9 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  Software Engineer with 2+ years experience building customer-centric web applications
-                  across frontend and backend. I ship reliable integrations, design clean APIs, and debug
-                  production issues.
+                  Backend-focused Software Engineer building healthcare platforms, CRM/EHR integrations,
+                  automation, and full-stack products. I turn complex workflows into reliable APIs and
+                  production-ready experiences.
                 </p>
               </div>
 
@@ -243,12 +243,14 @@ const profile = {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  href="https://github.com/mozahidulislamoshe"
+                  href="https://github.com/Himatrooshe"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
                     <span className="relative flex items-center justify-center gap-2 text-white font-medium">
-                      <span>Learn More</span>
+                      <span>View GitHub</span>
                       <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                     </span>
                   </span>
@@ -288,7 +290,7 @@ const profile = {
             </div>
 
             {/* Right column - Code window */}
-            <div className="w-full lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
+            <div className="w-full min-w-0 lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
               <div className="gradient-border">
                 <div className="code-window bg-[#091121]">
                   <div className="window-header">
@@ -300,7 +302,7 @@ const profile = {
                       developer.js
                     </span>
                   </div>
-                  <pre className="language-javascript">
+                  <pre className="language-javascript max-w-full overflow-x-auto text-xs sm:text-sm">
                     <code className="language-javascript">{code}</code>
                   </pre>
                 </div>

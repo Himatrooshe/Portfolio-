@@ -124,6 +124,8 @@ const SkillsSection = () => {
           name: "GraphQL",
           icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
         },
+        { name: "Hydrogen / Oxygen", icon: <SiShopify className="w-4 h-4 text-[#7AB55C]" /> },
+        { name: "Storefront API", icon: <SiShopify className="w-4 h-4 text-[#7AB55C]" /> },
       ],
     },
     {
@@ -164,6 +166,9 @@ const SkillsSection = () => {
           name: "Google Cloud Run",
           icon: <Cloud className="w-4 h-4 text-[#4285F4]" />,
         },
+        { name: "Kubernetes / GKE", icon: <Cloud className="w-4 h-4 text-[#326CE5]" /> },
+        { name: "GCP / VPS", icon: <FaAws className="w-4 h-4 text-[#4285F4]" /> },
+        { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
         {
           name: "SEO Optimization",
           icon: <BsGrid1X2 className="w-4 h-4 text-[#34A853]" />,
@@ -214,6 +219,9 @@ const SkillsSection = () => {
           name: "SQL",
           icon: <Database className="w-4 h-4 text-[#00758F]" />,
         },
+        { name: "PostgreSQL", icon: <SiPostgresql className="w-4 h-4 text-[#4169E1]" /> },
+        { name: "Prisma ORM", icon: <Database className="w-4 h-4 text-white" /> },
+        { name: "Webhooks / JWT", icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" /> },
         {
           name: "Shopify Remix",
           icon: <SiShopify className="w-4 h-4 text-[#7AB55C]" />,

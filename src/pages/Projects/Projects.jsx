@@ -1,11 +1,9 @@
 // Replace the first line
 import { useTransform, motion, useScroll } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import PropTypes from "prop-types";
 
 import { ReactLenis } from "lenis/react";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Import project images
 import AutobizzMain from "@/assets/images/autobizz.,homnemain.png";
@@ -13,17 +11,68 @@ import AutobizzStore from "@/assets/images/store.autobizz.png";
 import CheeseClub from "@/assets/images/cheesclub.png";
 import JellyLand from "@/assets/images/jellayland.png";
 import Rudy from "@/assets/images/rudy.png";
-import AutobizzOld from "@/assets/images/autobizzhomeold.png";
 import vendor from "@/assets/images/mulivendor.png";
-
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+import LemonAndLine from "@/assets/images/lemon-and-line.png";
+import FlashShopBD from "@/assets/images/flashshopbd.png";
+import PlushiesAndMore from "@/assets/images/plushies-and-more.jpg";
+import Monexa from "@/assets/images/monexa-money-management.jpg";
 
 const projects = [
   {
-    title: "Anime Watching & Manga Reading Website (MERN)",
+    title: "FlashShopBD — Production E-commerce Store",
     description:
-      "Built a full-stack platform with authentication, search, and content categorization. Implemented backend APIs and integrated them with a responsive frontend UI.",
+      "Designed and developed an end-to-end online store for Bangladesh with responsive product discovery, cart, Cash on Delivery checkout, and customer-support journeys. The store now generates more than ৳200K in monthly sales.",
+    src: "ecommerce.jpg",
+    link: FlashShopBD,
+    color: "#2f75a8",
+    githubLink: "https://github.com/ahnafahad53-hue/FlashShopBD",
+    liveLink: "https://www.flashshopbd.com/",
+    imageFit: "contain",
+  },
+  {
+    title: "Autobizz — Company Website",
+    description:
+      "Built the Autobizz company website end to end, presenting its Shopify, custom software, ERP/CRM, automation, and brand services through a responsive, conversion-focused experience.",
+    src: "autobizz.jpg",
+    link: AutobizzMain,
+    color: "#58c9e8",
+    githubLink: "",
+    liveLink: "https://www.autobizz.net/",
+  },
+  {
+    title: "Jellyland — Headless Shopify Storefront",
+    description:
+      "Built and deployed a production storefront for a U.S. client with Shopify Hydrogen, Remix, React, Oxygen, GraphQL, and the Storefront API, including product, collection, cart, and variant workflows.",
+    src: "commerce.jpg",
+    link: JellyLand,
+    color: "#5eead4",
+    githubLink: "",
+    liveLink: "https://jellylandusa.com/",
+  },
+  {
+    title: "Autobizz — Shopify Store",
+    description:
+      "Built and customized the Autobizz commerce storefront with Shopify, Liquid, metafields, and responsive UX improvements.",
+    src: "shopify.jpg",
+    link: AutobizzStore,
+    color: "#f6c85f",
+    githubLink: "",
+    liveLink: "https://store.autobizz.net/",
+  },
+  {
+    title: "Lemon & Line — Shopify Store Optimization",
+    description:
+      "Optimized the nautical lifestyle storefront with Shopify Liquid and performance-focused product-detail and UX refinements, supporting a clearer path from product discovery to purchase.",
+    src: "shopify.jpg",
+    link: LemonAndLine,
+    color: "#8db7d8",
+    githubLink: "",
+    liveLink: "https://www.lemonandline.com/",
+  },
+  {
+    title: "Shopify Two-Way Delivery Integration",
+    description:
+      "Built a Shopify integration and operations dashboard that supports two-way delivery workflows, synchronizing order and fulfillment updates between the store and delivery process for clearer tracking and fewer manual steps.",
     src: "rock.jpg",
     link: CheeseClub,
     color: "#5196fd",
@@ -37,48 +86,41 @@ const projects = [
     src: "tree.jpg",
     link: vendor,
     color: "#8f89ff",
-    githubLink: "",
-    liveLink: "",
+    githubLink: "https://github.com/junaidzamaahmed/multivendor-ecommerce",
+    liveLink: "https://multivendor-ecommerce-six.vercel.app/",
   },
   {
-    title: "Hand Gesture Controlled Robot (IoT + Arduino)",
+    title: "Grasshopper Capital — Loan Management App",
     description:
-      "Built a robotic car controlled by hand gestures using Arduino and sensors, integrating wireless communication and troubleshooting hardware/software issues.",
+      "Contributed to a loan-management application that helps the client monitor and manage a portfolio of more than $5M, with centralized borrower data, performance visibility, and more efficient financial workflows.",
     src: "water.jpg",
     link: Rudy,
-    color: "#ff6b35",
+    color: "#7fd6b5",
     githubLink: "",
     liveLink: "",
   },
   {
-    title: "Website Security Service Landing Page",
+    title: "Monexa — AI Voice Money Manager",
     description:
-      "Built a responsive landing page with SEO optimization and conversion-focused UX.",
-    src: "house.jpg",
-    link: JellyLand,
-    color: "#ff1493",
-    githubLink: "",
-    liveLink: "",
+      "Built a personal finance application with an AI voice system that listens to natural-language commands and helps users manage spending, budgets, loans, and savings from one dashboard.",
+    src: "finance.jpg",
+    link: Monexa,
+    color: "#1b806f",
+    githubLink: "https://github.com/Oshi-01/money-management",
+    liveLink: "https://money-management-jet.vercel.app/login?callbackUrl=https%3A%2F%2Fmoney-management-jet.vercel.app%2Fdashboard",
+    imageFit: "contain",
   },
   {
-    title: "Shopify Store Optimization",
+    title: "Plushies & More — E-commerce Landing Page",
     description:
-      "Upgraded product detail pages and improved performance with customer-centric layout refinements.",
-    src: "rock.jpg",
-    link: AutobizzStore,
-    color: "#00c9a7",
-    githubLink: "",
-    liveLink: "",
-  },
-  {
-    title: "AC Repair Service Landing Page + Automation",
-    description:
-      "Developed a landing page with booking automation, improving operational flow and reducing manual work.",
-    src: "house.jpg",
-    link: AutobizzOld,
-    color: "#6c5ce7",
-    githubLink: "",
-    liveLink: "",
+      "Designed and developed a playful, responsive storefront for plush toys and gifts, with clear category discovery and commerce-focused navigation. The original domain is currently offline.",
+    src: "plushies.jpg",
+    link: PlushiesAndMore,
+    color: "#ef7d8b",
+    githubLink: "https://github.com/Himatrooshe/Plushies-nd-more",
+    liveLink: "https://plushiesandmore.store/",
+    liveLabel: "Domain offline",
+    imageFit: "contain",
   },
 ];
 
@@ -89,109 +131,12 @@ export default function Projects() {
     offset: ["start start", "end end"],
   });
 
-  useEffect(() => {
-    // Add specific styles for 1366x768 resolution
-    const style = document.createElement("style");
-    style.textContent = `
-      @media screen and (width: 1366px) and (height: 768px),
-             screen and (width: 1367px) and (height: 768px),
-             screen and (width: 1368px) and (height: 769px) {
-        .project-card {
-          scale: 0.85;
-          margin-top: -5vh;
-        }
-        .project-container {
-          height: 90vh;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Resolution check function
-    const checkResolution = () => {
-      const isTargetResolution =
-        window.innerWidth >= 1360 &&
-        window.innerWidth <= 1370 &&
-        window.innerHeight >= 760 &&
-        window.innerHeight <= 775;
-
-      if (isTargetResolution) {
-        document.documentElement.style.setProperty("--project-scale", "0.85");
-        document.documentElement.style.setProperty("--project-margin", "-5vh");
-      } else {
-        document.documentElement.style.setProperty("--project-scale", "1");
-        document.documentElement.style.setProperty("--project-margin", "0");
-      }
-    };
-
-    checkResolution();
-    window.addEventListener("resize", checkResolution);
-
-    // Add revealing animations for projects
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach((card, index) => {
-      // Create a timeline for each card
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: "top 85%", // Start animation earlier
-          end: "top 15%",   // End animation later for smoother transition
-          toggleActions: "play none none reverse",
-          scrub: 0.5,       // Add smooth scrubbing effect
-          // Uncomment for debugging
-          // markers: true,
-        }
-      });
-      
-      // Add animations to the timeline with improved easing
-      tl.fromTo(card, 
-        { 
-          y: 80,           // Reduced distance for smoother movement
-          opacity: 0,
-          scale: 0.95,     // Less extreme scale change
-          rotateX: 5       // Reduced rotation for subtlety
-        }, 
-        { 
-          y: 0, 
-          opacity: 1, 
-          scale: 1,
-          rotateX: 0,
-          duration: 1.2,    // Longer duration for smoother animation
-          ease: "power2.out", // Changed easing function for smoother motion
-          clearProps: "transform,opacity" // Only clear necessary properties
-        }
-      );
-      
-      // Animate card content elements with improved stagger
-      const cardContent = card.querySelectorAll('.card-content-animate');
-      tl.fromTo(cardContent,
-        { y: 20, opacity: 0 }, // Reduced distance
-        { 
-          y: 0, 
-          opacity: 1, 
-          stagger: 0.08,     // Slightly faster stagger
-          duration: 0.8,     // Longer duration
-          ease: "power1.out" // Smoother easing
-        },
-        "-=0.6"             // Start earlier for better flow
-      );
-    });
-
-    return () => {
-      document.head.removeChild(style);
-      window.removeEventListener("resize", checkResolution);
-      // Clean up ScrollTrigger instances
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
-
   return (
     <ReactLenis root>
       <main className="bg-black" ref={container}>
         <section className="text-white w-full bg-slate-950">
           {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
+            const targetScale = 1 - (projects.length - i) * 0.025;
             return (
               <Card
                 key={`p_${i}`}
@@ -201,10 +146,12 @@ export default function Projects() {
                 color={project.color}
                 description={project.description}
                 progress={scrollYProgress}
-                range={[i * 0.25, 1]}
+                range={[i / projects.length, 1]}
                 targetScale={targetScale}
                 githubLink={project.githubLink}
                 liveLink={project.liveLink}
+                liveLabel={project.liveLabel}
+                imageFit={project.imageFit}
               />
             );
           })}
@@ -225,6 +172,8 @@ function Card({
   targetScale,
   githubLink,
   liveLink,
+  liveLabel = "Live",
+  imageFit = "cover",
 }) {
   const container = useRef(null);
   const scale = useTransform(progress, range, [1, targetScale]);
@@ -232,16 +181,14 @@ function Card({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0 project-container"
+      className="min-h-screen md:h-screen flex items-center justify-center md:sticky md:top-0 project-container py-16 md:py-0"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
-          transform: `scale(var(--project-scale, 1))`,
-          marginTop: "var(--project-margin, 0)",
+          top: `calc(-4vh + ${i * 10}px)`,
         }}
-        className="relative -top-[15%] h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
+        className="relative md:-top-[10%] h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
       >
         {/* Modern split card design */}
         <div className="w-full flex flex-col md:flex-row bg-zinc-900 rounded-2xl overflow-hidden shadow-xl">
@@ -250,7 +197,7 @@ function Card({
             <img
               src={url}
               alt={title}
-              className="w-full h-full object-cover"
+              className={`w-full h-full ${imageFit === "contain" ? "object-contain bg-white" : "object-cover"}`}
             />
 
 
@@ -341,7 +288,7 @@ function Card({
                         className="text-xs md:text-sm font-medium"
                         style={{ color }}
                       >
-                        Live
+                        {liveLabel}
                       </span>
                     </a>
                   ) : null}
@@ -367,4 +314,6 @@ Card.propTypes = {
   targetScale: PropTypes.number.isRequired,
   githubLink: PropTypes.string,
   liveLink: PropTypes.string,
+  liveLabel: PropTypes.string,
+  imageFit: PropTypes.oneOf(["cover", "contain"]),
 };
